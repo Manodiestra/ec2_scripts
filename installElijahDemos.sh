@@ -25,6 +25,7 @@ pip install django djangorestframework django-cors-headers
 
 # Step 4: Make migrations and migrate
 echo "Running migrations..."
+python manage.py makemigrations registration
 python manage.py makemigrations
 python manage.py migrate
 
