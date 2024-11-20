@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# installing apps in ubuntu homedir.  Update as you see fit
+cd /home/ubuntu;
+
 # Exit immediately if a command exits with a non-zero status
 set -e
 
