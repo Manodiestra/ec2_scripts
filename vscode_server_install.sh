@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# installing apps in ubuntu homedir.  Update as you see fit
+cd /home/ubuntu;
+
 # Step 1: Update system packages
 echo ""
 echo "Updating system packages..."
