@@ -34,6 +34,15 @@ else
 fi
 cd $REPO_EXPO
 
+# Django and Expo running on same host
+# Setting IP env variables to be used when calling backend dj server, from expo
+EXPO_PUBLIC_PRIVATE_IP=$(hostname -I | awk '{print $1}')
+EXPO_PUBLIC_PUBLIC_IP=$(curl -s http://checkip.amazonaws.com/)
+
+echo "EXPO_PUBLIC_PRIVATE_IP=$EXPO_PUBLIC_PRIVATE_IP" > .env
+echo "EXPO_PUBLIC_PUBLIC_IP=$EXPO_PUBLIC_PUBLIC_IP" >> .env
+
 # Step 9: Run the Expo app
 echo "Starting Expo app on port 8081..."
 npm start &
+
